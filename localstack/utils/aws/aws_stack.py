@@ -474,7 +474,7 @@ def connect_elasticsearch(endpoint=None, domain=None, region_name=None, env=None
     verify_certs = False
     use_ssl = False
     if not endpoint and env.region == REGION_LOCAL:
-        endpoint = os.environ['TEST_ELASTICSEARCH_URL']
+        endpoint = os.environ['ELASTICSEARCH_URL']
     if not endpoint and env.region != REGION_LOCAL and domain:
         endpoint = get_elasticsearch_endpoint(domain=domain, region_name=env.region)
     # use ssl?
