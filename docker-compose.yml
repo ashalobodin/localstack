@@ -23,11 +23,11 @@ services:
       - localstack_data:/tmp/localstack
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - localstack_default
+      - localstack_elasticsearch
 
 volumes:
   localstack_data:
 
 networks:
-  localstack_default:
+  localstack_elasticsearch:
     external: true
