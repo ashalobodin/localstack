@@ -24,6 +24,18 @@ have to update your CI configurations.) Please refer to the updated
 The old Docker image (`atlassianlabs/localstack`) is still available but will not be maintained
 any longer.
 
+# Running LocalStack for utilizing Elasticsearch in Fulfillment-API
+
+This fork from *LocalStack* has been changed to use only *Firehose* and external ElasticSearch docker container.
+In order to start *localstack* in Docker:
+
+```
+docker-compose up --build
+```
+This will build a container from localstack image with necessary changes.
+It will also set a default path to Elasticsearch as *http://elasticsearch:9200*
+
+
 # Overview
 
 *LocalStack* spins up the following core Cloud APIs on your local machine:
